@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "28e10e1c-be86-4f08-8284-ccc53062b628",
+		"name": TEST QA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18824088"
+	},
+	"item": [
+		{
+			"name": "getWorkers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testqa.razrab.space:8083/api/getWorkers",
+					"protocol": "http",
+					"host": [
+						"testqa",
+						"razrab",
+						"space"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"getWorkers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getWorkers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://testqa.razrab.space:8083/api/getWorkers",
+							"protocol": "http",
+							"host": [
+								"testqa",
+								"razrab",
+								"space"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"getWorkers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"\",\n    \"workers\": [\n        {\n            \"id\": 1,\n            \"fio\": \"Зайцев Михаил Владимирович\",\n            \"status\": 1,\n            \"salary\": \"5000\",\n            \"birthday\": \"15.05.1997\",\n            \"country\": \"Россия\",\n            \"phone\": \"+7 (999) 999-99-99\"\n        },\n        {\n            \"id\": 2,\n            \"fio\": \"Иванов Пётр Сидорович\",\n            \"status\": 1,\n            \"salary\": \"3700\",\n            \"birthday\": \"21.10.1989\",\n            \"country\": \"Россия\",\n            \"phone\": \"+7 (999) 999-99-99\"\n        },\n        {\n            \"id\": 3,\n            \"fio\": \"Антонов Антон Владимирович\",\n            \"status\": 1,\n            \"salary\": \"2900\",\n            \"birthday\": \"27.12.1972\",\n            \"country\": \"Россия\",\n            \"phone\": \"+7 (999) 999-99-99\"\n        },\n        {\n            \"id\": 4,\n            \"fio\": \"Беляев Сергей Алексеевич\",\n            \"status\": 1,\n            \"salary\": \"7300\",\n            \"birthday\": \"12.12.1990\",\n            \"country\": \"Россия\",\n            \"phone\": \"+7 (999) 999-99-99\"\n        },\n        {\n            \"id\": 5,\n            \"fio\": \"Михалкова Анна Геннадьевна\",\n            \"status\": 1,\n            \"salary\": \"1700\",\n            \"birthday\": \"17.01.1995\",\n            \"country\": \"Россия\",\n            \"phone\": \"+7 (999) 999-99-99\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "getWorkerInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testqa.razrab.space:8083/api/getWorkerInfo",
+					"protocol": "http",
+					"host": [
+						"testqa",
+						"razrab",
+						"space"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"getWorkerInfo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://testqa.razrab.space:8083/api/getWorkerInfo?id=1",
+							"protocol": "http",
+							"host": [
+								"testqa",
+								"razrab",
+								"space"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"getWorkerInfo"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"\",\n    \"worker\": {\n        \"id\": 1,\n        \"fio\": \"Зайцев Михаил Владимирович\",\n        \"status\": 1,\n        \"salary\": \"5000\",\n        \"birthday\": \"15.05.1997\",\n        \"country\": \"Россия\",\n        \"phone\": \"+7 (999) 999-99-99\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "updateWorkerInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"fio\": \"Артемов Артем\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://testqa.razrab.space:8083/api/updateWorkerInfo",
+					"protocol": "http",
+					"host": [
+						"testqa",
+						"razrab",
+						"space"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"updateWorkerInfo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "updateWorkerInfo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"fio\": \"Артемов Артем\"\r\n}"
+						},
+						"url": {
+							"raw": "http://testqa.razrab.space:8083/api/updateWorkerInfo",
+							"protocol": "http",
+							"host": [
+								"testqa",
+								"razrab",
+								"space"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"updateWorkerInfo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\"success\":true,\"message\":\"success\"}"
+				}
+			]
+		},
+		{
+			"name": "createWorker",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n  \"fio\" : \"Тестов Тест Тестович\",\r\n  \"salary\" : \"5000\",\r\n  \"birthday\" : \"15.05.1997\",\r\n  \"country\" : \"Россия\",\r\n  \"phone\" : \"+7 (999) 999-99-99\"\r\n} "
+				},
+				"url": {
+					"raw": "http://testqa.razrab.space:8083/api/createWorker",
+					"protocol": "http",
+					"host": [
+						"testqa",
+						"razrab",
+						"space"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"createWorker"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createWorker",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"fio\" : \"Тестов Тест Тестович\",\r\n  \"salary\" : \"5000\",\r\n  \"birthday\" : \"15.05.1997\",\r\n  \"country\" : \"Россия\",\r\n  \"status\" : 1,\r\n  \"phone\" : \"+7 (999) 999-99-99\"\r\n} "
+						},
+						"url": {
+							"raw": "http://testqa.razrab.space:8083/api/createWorker",
+							"protocol": "http",
+							"host": [
+								"testqa",
+								"razrab",
+								"space"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"createWorker"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\"success\":true,\"message\":\"success\"}"
+				}
+			]
+		}
+	]
+}
